@@ -1,0 +1,50 @@
+@import "./style_container"
+@import "./style_form"
+@import "./style_box"
+@import "./style_input"
+@import "./style_background"
+@import "./font-face"
+
+$width-form: 600px
+
+.container
+    @extend %container-padrao
+    align-items: center
+    box-sizing: border-box
+    display: flex
+    flex-direction: column
+    height: fit-content
+    padding: 55px 0
+    justify-content: space-around
+    width: $width-form + 250px
+
+.form
+    @extend %style_form
+    align-items: center
+    width: $width-form
+
+.titulo_formulario
+    @extend %title_form
+    margin-bottom: 20px
+
+.input_descricao
+    @extend %text_area
+    height: 200px
+    width: $width-form
+
+.botao_submit
+    @extend %botao-acao
+    background-color: #44b0e6
+    color: white
+    font-family: 'Oswald'
+    margin: 15px 0
+    letter-spacing: 1.2px
+
+.grid-box
+    @extend %grid-box
+    width: 100%
+
+.flex-box
+    @extend  %flex-box
+    width: $width-form
+    
