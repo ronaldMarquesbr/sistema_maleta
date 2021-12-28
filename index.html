@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Empréstimo de Maletas</title>
+
+    <script src="lib/jquery/jquery.js"></script>
+
+    <script src="lib/bootstrap/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+
+    <link rel="stylesheet" href="./lib/boxicons/css/boxicons.css">
+
+    <script src="JS/script_main.js" defer></script>
+    <link rel="stylesheet" href="css/style_main.css">
+
+    <script src="lib/mask/script_mask.js" defer></script>
+
+    <link rel="stylesheet" href="lib/icons/css/icons.css">
+
+</head>
+
+
+<body id="body-pd">
+
+    <header class="header" id="header">
+        <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
+    </header>
+
+    <div class="l-navbar" id="nav-bar">
+        <nav class="nav">
+
+            <div> 
+
+                <a href="#" class="nav_logo"> 
+                    <img src="./imgs/logo_pequeno.png" id="isotipo-censipam-pequeno">
+                    Painel Empréstimo<br>de Maletas
+                </a>
+
+                <div class="nav_list">
+
+                    
+
+                    <a class="nav_link" id="link-cadastro">
+                        <i class='bx bx-user nav_icon'></i>
+                        <span class="nav_name">Cadastrar Instituição</span>
+                    </a>
+
+                    <a class="nav_link" id="link-emprestimo">
+                        <i class='bx bx-message-square-detail nav_icon'></i>
+                        <span class="nav_name">Solicitar Empréstimo</span>
+                    </a>
+
+                    <a class="nav_link" id="link-ativos">
+                        <i class='bx bx-bar-chart-alt-2 nav_icon'></i>
+                        <span class="nav_name">Empréstimos Ativos</br>Prorrogação</span>
+                    </a> 
+
+                    <a class="nav_link active">
+                        <i class='bx bx-grid-alt nav_icon'></i>
+                        <span class="nav_name">Dashboard</span>
+                    </a>
+                
+                </div>
+                            
+            </div> 
+
+        </nav>
+    </div>
+
+    <div class="height-100 bg-light" id="cont">
+
+
+        <div class="intro">
+            <h1>Painel Empréstimo de Maletas</h1>
+            <img src="./imgs/Logo-censipam.png" class="logo-censipam">
+        </div>
+        
+
+
+        <div class="grid-cards">
+
+            <div class="flex-card">
+
+                <label>Solicitar Empréstimo</label>
+                
+                <div class="box-img-card">
+               
+                    <img src="./imgs/imgs_cards/email.png" class="img-card">
+
+            
+                    <svg class="svg-circle"> 
+                        <circle cx="50" cy="50" r="40" class="circle" fill="#8ACEF5" />
+                    </svg>
+
+                </div>
+
+            </div>
+
+            <div class="flex-card">
+
+                <label>Cadastrar Instituição</label>
+
+                <div class="box-img-card">
+                    <img src="./imgs/imgs_cards/add.png" class="img-card">
+
+                    <svg class="svg-circle"> 
+                        <circle cx="50" cy="50" r="40" class="circle" fill="#EEACB3" />
+                    </svg>
+                </div>
+
+            </div>
+
+            <div class="flex-card">
+
+                <label>Empréstimos Ativos</label>
+
+                <div class="box-img-card">
+                    <img src="./imgs/imgs_cards/file.png" class="img-card">
+
+                    <svg class="svg-circle"> 
+                        <circle cx="50" cy="50" r="40" class="circle" fill="#7A9CF5" />
+                    </svg>
+                </div>
+
+            </div>
+
+            <div class="flex-card">
+
+                <label>Dashboard</label>
+
+                <div class="box-img-card">
+                    <img src="./imgs/imgs_cards/chart.png" class="img-card">
+
+                    <svg class="svg-circle"> 
+                        <circle cx="50" cy="50" r="40" class="circle" fill="#9AF5E0" />
+                    </svg>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+ 
+
+    
+    <script>
+        $(document).ready(function(){
+             $("#link-cadastro").click(function(){
+                  
+                 $(function(){
+                     $("#cont").load("/pages/cadastro.html"); 
+                 });
+             });
+
+             $("#link-emprestimo").click(function(){
+                  
+                  $(function(){
+                      $("#cont").load("/pages/emprestimo.html"); 
+                  });
+              });
+
+              $("#link-ativos").click(function(){
+                  
+                  $(function(){
+                      $("#cont").load("/pages/ativos.html"); 
+                  });
+              });
+        });
+        </script>
+
+    </body>
+
+</html>
