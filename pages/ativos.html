@@ -64,8 +64,8 @@
               <td class="">123456789101112</td>
               <td class="linha-instituicao">Instituto </td>
               <td class="">13</td>
-              <td><a href='./pages/editar.html'><button type='button' class='btn btn-primary'>Editar</button></a></td>
-              <td><a href='./pages/finalizar.html'><button type='button' id='botao-finalizar' class='btn btn-danger' name='finalizar'>Finalizar</button></a></td>
+              <td><button type='button' id="botao-editar" class='btn btn-primary'>Editar</button></td>
+              <td><button type='button' id='botao-finalizar' class='btn btn-danger' name='finalizar'>Finalizar</button></td>
 
           </tr>
 
@@ -74,6 +74,24 @@
 
     </div>
 
-  </div>
+      </div>
 
+    <script>
+    
+      $("#botao-editar").click(function(){
+            
+        $("#cont").load("/pages/editar.html"); 
+
+      });
+
+      $("#botao-finalizar").click(function(){
+            
+        $("#cont").load("/pages/finalizar.html"); 
+        $("#cont").addClass("pad-header");
+
+      });
+
+    </script>
+       
+</body>
 </html>

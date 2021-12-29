@@ -6,6 +6,8 @@
 @import "./font-face"
 
 $width-form: 600px
+$height-container: 800px
+$width-logo: 90px
 
 .container
     @extend %container-padrao
@@ -13,8 +15,9 @@ $width-form: 600px
     box-sizing: border-box
     display: flex
     flex-direction: column
-    height: fit-content
-    padding: 55px 0
+    height: $height-container
+    position: relative
+    margin-bottom: 2rem
     justify-content: space-around
     width: $width-form + 250px
 
@@ -25,7 +28,7 @@ $width-form: 600px
 
 .titulo_formulario
     @extend %title_form
-    margin-bottom: 20px
+    display: inline
 
 .input_descricao
     @extend %text_area
@@ -53,3 +56,11 @@ $width-form: 600px
     @extend  %flex-box
     width: $width-form
 
+.header-form
+    width: 100%
+    height: $width-logo
+    text-align: center
+
+#logo-sipam
+    float: right
+    width: $width-logo

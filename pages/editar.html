@@ -13,16 +13,27 @@
 </head>
 
 <body>
-
+    <!-- style="position: absolute; top: 0.7%; right: 3%; transform: scale(0.7,0.7);" -->
     <div class="background">
     <div class="container">
 
-        <img src="../imgs/logo-maior.png" style="position: absolute; top: 0.7%; right: 3%; transform: scale(0.7,0.7);" alt="logo-sipam">
-        <h1 class="titulo_formulario">Atualização de Empréstimo</h1>
+        <div class="header-form">
+            <h1 class="titulo_formulario">Atualização de Empréstimo</h1>
+            <img src="../imgs/logo-maior.png"  alt="logo-sipam" id="logo-sipam">
+        </div>
 
         <form class="form" method="post">
 
              <div class="flex-box">
+
+                <div class="box-input">
+
+                    <label class="nome-campo">Instituição</label>
+                    <input class="campo" type="text" name="instituicao" id="instituicao" disabled>
+
+                </div>
+
+                <div class="grid-box">
 
                     <div class="box-input">
 
@@ -39,50 +50,45 @@
 
                     </div>
 
+                </div>
+
+
+                <div class="grid-box">
+
                     <div class="box-input">
 
-                        <label class="nome-campo">Instituição</label>
-                        <input class="campo" type="text" name="instituicao" id="instituicao" disabled>
-
-                    </div>
-
-
-                    <div class="grid-box">
-
-                        <div class="box-input">
-
-                            <label class="nome-campo">Data de início</label>
-                            <input class="data campo" type="date" name="dataIni" oninput="dataMin(this.value)" id="dataIni" required>
-                        </div>
-
-                        <div class="box-input">
-
-                            <label class="nome-campo">Data de Fim <span style="color: red;">*</span></label>
-                            <input class="data campo" type="date" name="dataFim" min="" required>
-
-                        </div>
-
+                        <label class="nome-campo">Data de início</label>
+                        <input class="data campo" type="date" name="dataIni" oninput="dataMin(this.value)" id="dataIni" required>
                     </div>
 
                     <div class="box-input">
 
-                        <label for="nome-inst" class="nome-campo">Ofício de Prorrogação <span style="color: red;">*</span></label>
-                        <input class="campo" type="text" name="num_prorrogacao" id="num_prorrogacao" value="">
+                        <label class="nome-campo">Data de Fim <span style="color: red;">*</span></label>
+                        <input class="data campo" type="date" name="dataFim" min="" required>
 
                     </div>
 
                 </div>
-
-
 
                 <div class="box-input">
-                    <label class="nome-campo">Descrição:</label>
-                    <textarea class="input_descricao campo" name="descricao" id="descricao"></textarea>
-                </div>
-            <?php } ?>
-            <button type="submit" class="botao_submit" name="atualizar">Atualizar</button>
 
-        </form>
+                    <label for="nome-inst" class="nome-campo">Ofício de Prorrogação <span style="color: red;">*</span></label>
+                    <input class="campo" type="text" name="num_prorrogacao" id="num_prorrogacao" value="">
+
+                </div>
+
+            </div>
+
+
+
+            <div class="box-input">
+                <label class="nome-campo">Descrição:</label>
+                <textarea class="input_descricao campo" name="descricao" id="descricao"></textarea>
+            </div>
+        <?php } ?>
+        <button type="submit" class="botao_submit" name="atualizar">Atualizar</button>
+
+    </form>
 
 
     </div>
