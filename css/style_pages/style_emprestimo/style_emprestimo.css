@@ -30,7 +30,7 @@
 .botao_submit {
   border: none;
   border-radius: 20px;
-  box-shadow: 0px 0px 8px #afafaf;
+  box-shadow: 0px 5px 8px #afafaf;
   font-size: 20px;
   font-weight: bold;
   height: 70px !important;
@@ -69,9 +69,8 @@
   .campo:hover, .campo:focus {
     outline: solid 4px rgba(68, 176, 230, 0.7); }
 
-.exemplo {
-  text-align: left;
-  color: rgba(0, 0, 0, 0.5); }
+[name='instituicao'] {
+  width: 600px; }
 
 .background {
   background-image: linear-gradient(to right, #288f21, #64C25D, #44b0e6, #4537A3);
@@ -116,7 +115,11 @@
   color: white;
   font-family: "Oswald";
   margin: 15px 0;
-  letter-spacing: 1.2px; }
+  letter-spacing: 1.2px;
+  transition: 0.5s; }
+  .botao_submit:hover {
+    background-color: white;
+    color: #44b0e6; }
 
 .grid-box {
   width: 100%; }

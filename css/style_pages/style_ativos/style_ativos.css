@@ -1,0 +1,52 @@
+@font-face {
+  font-family: Nunito;
+  src: url("../../fonts/nunito/Nunito-Regular.ttf"); }
+@font-face {
+  font-family: Oswald;
+  src: url("../../fonts/oswald/Oswald-VariableFont_wght.ttf"); }
+* {
+  font-family: "Nunito", "Arial"; }
+
+.container {
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  box-shadow: 0px 3px 10px 1px #000000;
+  box-sizing: border-box;
+  margin: 2rem 0;
+  position: relative;
+  text-align: center; }
+
+.background {
+  background-image: linear-gradient(to right, #288f21, #64C25D, #44b0e6, #4537A3);
+  display: flex;
+  height: 100%;
+  overflow: visible;
+  justify-content: center;
+  width: 100%; }
+
+.container {
+  height: 600px;
+  overflow: auto; }
+
+.titulo {
+  margin: 1.2rem 0;
+  font-weight: 600;
+  font-family: "Oswald";
+  letter-spacing: 1px; }
+
+.box-label {
+  border: solid 0.8px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  box-shadow: inset 0px 3px 2px rgba(0, 0, 0, 0.2);
+  float: left;
+  padding: 10px;
+  margin: 11px 0 0 11px;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.linha-instituicao {
+  width: 400px;
+  background-color: black; }
+
+/*# sourceMappingURL=style_ativos.css.map */

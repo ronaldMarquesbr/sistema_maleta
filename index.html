@@ -72,104 +72,49 @@
         </nav>
     </div>
 
-    <div class="height-100 bg-light" id="cont">
-
-
-        <div class="intro">
-            <h1>Painel Empréstimo de Maletas</h1>
-            <img src="./imgs/Logo-censipam.png" class="logo-censipam">
-        </div>
-        
-
-
-        <div class="grid-cards">
-
-            <div class="flex-card">
-
-                <label>Solicitar Empréstimo</label>
-                
-                <div class="box-img-card">
-               
-                    <img src="./imgs/imgs_cards/email.png" class="img-card">
-
-            
-                    <svg class="svg-circle"> 
-                        <circle cx="50" cy="50" r="40" class="circle" fill="#8ACEF5" />
-                    </svg>
-
-                </div>
-
-            </div>
-
-            <div class="flex-card">
-
-                <label>Cadastrar Instituição</label>
-
-                <div class="box-img-card">
-                    <img src="./imgs/imgs_cards/add.png" class="img-card">
-
-                    <svg class="svg-circle"> 
-                        <circle cx="50" cy="50" r="40" class="circle" fill="#EEACB3" />
-                    </svg>
-                </div>
-
-            </div>
-
-            <div class="flex-card">
-
-                <label>Empréstimos Ativos</label>
-
-                <div class="box-img-card">
-                    <img src="./imgs/imgs_cards/file.png" class="img-card">
-
-                    <svg class="svg-circle"> 
-                        <circle cx="50" cy="50" r="40" class="circle" fill="#7A9CF5" />
-                    </svg>
-                </div>
-
-            </div>
-
-            <div class="flex-card">
-
-                <label>Dashboard</label>
-
-                <div class="box-img-card">
-                    <img src="./imgs/imgs_cards/chart.png" class="img-card">
-
-                    <svg class="svg-circle"> 
-                        <circle cx="50" cy="50" r="40" class="circle" fill="#9AF5E0" />
-                    </svg>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
+    <div class="height-100 bg-light" id="cont"></div>
  
 
     
     <script>
         $(document).ready(function(){
-             $("#link-cadastro").click(function(){
+    
+            $("#cont").load("/pages/main.html");
+
+            $("#link-cadastro").click(function(){
                   
                  $(function(){
                      $("#cont").load("/pages/cadastro.html"); 
+                     $("#cont").addClass("pad-header");
                  });
+
              });
 
-             $("#link-emprestimo").click(function(){
+            $("#link-emprestimo").click(function(){
                   
-                  $(function(){
-                      $("#cont").load("/pages/emprestimo.html"); 
-                  });
-              });
+                $(function(){
+                    $("#cont").load("/pages/emprestimo.html"); 
+                    $("#cont").addClass("pad-header");
+                });
 
-              $("#link-ativos").click(function(){
+            });
+
+            $("#link-ativos").click(function(){
+                  
+                $(function(){
+                    $("#cont").load("/pages/ativos.html"); 
+                    $("#cont").addClass("pad-header");
+                });
+
+            });
+
+            $(".nav_logo").click(function(){
                   
                   $(function(){
-                      $("#cont").load("/pages/ativos.html"); 
+                      $("#cont").load("/pages/main.html"); 
+                      $("#cont").removeClass("pad-header");
                   });
+  
               });
         });
         </script>
