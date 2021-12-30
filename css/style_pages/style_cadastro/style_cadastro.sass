@@ -1,2 +1,47 @@
-@import '../../styles/style_container.css'
+@import '../../styles/style_background'
+@import '../../styles/style_container'
+@import '../../styles/style_input'
+@import '../../styles/style_form'
+@import '../../styles/style_modal'
+
+$margin-input: 64px // 1rem = 16px
+
+.container
+    @extend %container-padrao
+    padding: 1rem 0
+    width: fit-content
+    height: fit-content
+
+.box-input
+    margin-left: $margin-input
+
+.campo[name="nome_inst"]
+    width: $width-form - $margin-input * 2
+
+.campo[name="sigla_inst"]
+    text-align: center
+    text-transform: uppercase
+    width: 80px
+
+
+.form
+    @extend %style_form
+
+
+.botao_submit
+    @extend %botao-acao
+    background-color: #44b0e6
+    color: white
+    font-family: 'Oswald'
+    height: 60px
+    letter-spacing: 1.2px
+    transition: .5s
+    margin: 15px auto
+    width: 150px
+    &:hover
+        background-color: white
+        color: #44b0e6
+
+.titulo_formulario
+    @extend %title_form
 

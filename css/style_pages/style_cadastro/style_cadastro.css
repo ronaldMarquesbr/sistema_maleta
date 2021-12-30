@@ -1,3 +1,138 @@
-@import url(../../styles/style_container.css);
+.background {
+  background-image: linear-gradient(to right, #288f21, #64C25D, #44b0e6, #4537A3);
+  display: flex;
+  height: 100%;
+  overflow-y: scroll;
+  padding-top: 2rem;
+  justify-content: center;
+  width: 100%; }
+
+.container {
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  box-shadow: 0px 3px 10px 1px #000000;
+  position: relative;
+  text-align: center; }
+
+.box-input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  width: fit-content; }
+
+.nome-campo {
+  font-size: 20px;
+  margin: 5px 0;
+  text-align: left; }
+
+.campo {
+  background-color: white;
+  border: solid 1px gray;
+  border-radius: 7px;
+  font-size: 20px;
+  height: 40px;
+  outline: solid 0px rgba(68, 176, 230, 0.7);
+  transition: outline 0.1s ease-out; }
+  .campo:hover, .campo:focus {
+    outline: solid 4px rgba(68, 176, 230, 0.7); }
+
+[name='instituicao'] {
+  width: 600px; }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 600px;
+  z-index: 1; }
+
+.titulo_formulario {
+  font-size: 40px;
+  font-family: "Oswald";
+  letter-spacing: 1.2px;
+  font-weight: 600;
+  margin: 0 0 1rem 0; }
+
+.botao_submit {
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0px 5px 8px #afafaf;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold; }
+  .botao_submit:focus {
+    box-shadow: inset 0px 0px 5px #797979; }
+
+.modal {
+  width: 100vw !important;
+  height: 100vh !important; }
+
+.modal-body {
+  text-align: center; }
+
+.check-img {
+  margin: 2rem 0; }
+
+.button-return {
+  background-color: white;
+  border: solid rgba(0, 0, 0, 0.7) 1.5px !important;
+  border-radius: 1rem;
+  cursor: pointer;
+  font-size: 22px;
+  height: 40px;
+  padding: 0;
+  position: relative;
+  transition: all 0.5s;
+  overflow: hidden;
+  width: 120px;
+  z-index: 1; }
+  .button-return:hover {
+    text-indent: -20%; }
+    .button-return:hover .set-icon {
+      right: 7%; }
+
+.set-icon {
+  align-items: center;
+  color: #44b0e6;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  font-size: 33px;
+  font-weight: bold;
+  position: absolute;
+  right: -20%;
+  top: 0;
+  transition: all 0.5s ease-out;
+  width: fit-content;
+  z-index: 500; }
+
+.container {
+  padding: 1rem 0;
+  width: fit-content;
+  height: fit-content; }
+
+.box-input {
+  margin-left: 64px; }
+
+.campo[name="nome_inst"] {
+  width: 472px; }
+
+.campo[name="sigla_inst"] {
+  text-align: center;
+  text-transform: uppercase;
+  width: 80px; }
+
+.botao_submit {
+  background-color: #44b0e6;
+  color: white;
+  font-family: "Oswald";
+  height: 60px;
+  letter-spacing: 1.2px;
+  transition: 0.5s;
+  margin: 15px auto;
+  width: 150px; }
+  .botao_submit:hover {
+    background-color: white;
+    color: #44b0e6; }
 
 /*# sourceMappingURL=style_cadastro.css.map */

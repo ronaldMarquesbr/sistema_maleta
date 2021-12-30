@@ -5,7 +5,6 @@
 @import "./style_background"
 @import "./font-face"
 
-$width-form: 600px
 $height-container: 800px
 $width-logo: 90px
 
@@ -24,28 +23,29 @@ $width-logo: 90px
 .form
     @extend %style_form
     align-items: center
-    width: $width-form
 
 .titulo_formulario
     @extend %title_form
-    margin-bottom: 1rem
+    
 
 .input_descricao
-    @extend %text_area
+    resize: none
+    text-align: start
+    text-indent: 8px
     height: 200px
     width: $width-form
 
 .botao_finalizar, .botao_submit
     @extend %botao-acao
+    height: 70px !important
+    width: 200px
+    background-color: #44b0e6
     color: white
     font-family: 'Oswald'
     letter-spacing: 1.2px
     transition: .5s
     margin: 15px 0
     position: relative
-
-.botao_submit
-    background-color: #44b0e6
     &:hover
         background-color: white
         color: #44b0e6

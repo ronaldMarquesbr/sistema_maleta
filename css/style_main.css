@@ -231,7 +231,7 @@ a {
     bottom: 0;
     position: absolute;
     transform: translateY(50%);
-    width: 200px;
+    width: 150px;
     z-index: 2;
 }
 
