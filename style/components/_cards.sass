@@ -1,0 +1,53 @@
+.card-1
+    align-items: center
+    background-color: rgb(233, 237, 241)
+    border: solid 1px rgba(0, 0, 0, 0.1)
+    border-radius: 8px
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0)
+    cursor: pointer
+    display: flex
+    height: 150px
+    justify-content: space-around
+    margin: 30px
+    overflow: hidden
+    transform: translateZ(0)    
+    transition: all 0.5s ease-out
+    width: 600px
+
+    &:hover
+        border: solid 1px rgba(0, 0, 0, 0.2)
+        box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.35)
+        transform: translateZ(50px)
+
+        .svg-circle
+            transform: scale(15)
+
+    label
+        cursor: pointer
+        font-size: 25px
+        font-weight: bold
+        z-index: 2
+
+
+.box-img-card
+    align-items: center
+    display: grid
+    grid-template: 1fr / 1fr
+
+
+.img-card
+    grid-column-start: 1
+    grid-row-start: 1
+    width: 80px
+    z-index: 2
+
+
+.svg-circle
+    grid-column-start: 1
+    grid-row-start: 1
+    height: 90px
+    opacity: 0.5
+    transform: scale(1.3)
+    transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1)
+    width: 90px
+    z-index: 1

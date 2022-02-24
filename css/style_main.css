@@ -179,15 +179,14 @@ a {
 .intro{
 
     /* animacao */
-
+/* 
     background: linear-gradient(150deg, #288f21, #64c25d, #44b0e6, #4537a3);
     background-size: 800% 800%;
 
     -webkit-animation: AnimationName 12s ease infinite;
     -moz-animation: AnimationName 12s ease infinite;
-    animation: AnimationName 12s ease infinite;
+    animation: AnimationName 12s ease infinite; */
 
-    /* fim animacao */
 
     align-items: center;
     display: flex;

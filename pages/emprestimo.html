@@ -2,13 +2,14 @@
 <html>
 
 <head>
+
     <meta charset="UTF-8">
 
     <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.css">
     <script src="../lib/bootstrap/js/bootstrap.js" defer></script>
     <script src="../lib/jquery/jquery.js" defer></script>
     <script src="../lib/mask/script_mask.js" defer></script>
-    <link rel="stylesheet" href="../css/style_pages/style_emprestimo/style_emprestimo.css">
+    <link rel="stylesheet" href="../style/main.css">
 
     
 </head>
@@ -16,18 +17,18 @@
 <body>
 
     <div class="background">
-    <div class="container">
+    <div class="form-container">
 
-        <img src=".././imgs/logo-maior.png" id="logo-sipam" alt="logo-sipam">
-        <h1 class="titulo_formulario">Solicitação de Empréstimo</h1>
+        <!-- <img src=".././imgs/logo-maior.png" class="logo-sipam" alt="logo-sipam"> -->
+        <h1>Solicitação de Empréstimo</h1>
 
         <form method="POST" class="form">
 
-            <div class="flex-box">
+            <div class="d-flex flex-column">
 
                 <div class="box-input">
 
-                    <label class="nome-campo">Selecione a Instituição</label>
+                    <label class="nome-campo">Instituição</label>
                     <select class="campo" name="instituicao">
 
                         <option seleted disable value="">
@@ -37,11 +38,11 @@
 
                 </div>
 
-                <div class="grid-box">
+                <div class="side">
 
                     <div class="box-input">
 
-                        <label class="nome-campo">Selecione o nº da Maleta</label>
+                        <label class="nome-campo">Maleta</label>
                         <select name="num_maleta" class="campo">
 
                             <option seleted disable value=""></option>
@@ -57,14 +58,14 @@
 
                     <div class="box-input">
 
-                        <label for="nome-inst" class="nome-campo">Digite nº Processo</label>
+                        <label for="nome-inst" class="nome-campo">Nº Processo</label>
                         <input class="campo" type="text" name="num_processo" placeholder="Ex: 12345.123456/2021-12" id="num_processo" required onkeypress="$(this).mask('00000.000000/0000-00')">
 
                     </div>
 
                 </div>
 
-                <div class="grid-box">
+                <div class="side">
                     <div class="box-input">
 
                         <label class="nome-campo">Data de início</label>
@@ -85,7 +86,7 @@
 
             <div class="box-input">
 
-                <label class="nome-campo">Descrição:</label>
+                <label class="nome-campo">Descrição</label>
                 <textarea class="input_descricao campo" name="descricao" placeholder="Ex: 'O aparelho vai ser operado em Imperatriz-MA'"></textarea>
 
             </div>

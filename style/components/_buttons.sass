@@ -1,0 +1,11 @@
+@mixin button-1($color1, $color2)
+    background-color: $color1
+    color: $color2 
+    border: none
+    border-radius: 0
+    box-shadow: $shadow1
+    cursor: pointer
+
+    &:focus
+        background-color: darken($color2, 20)
+        
