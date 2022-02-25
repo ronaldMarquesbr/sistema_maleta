@@ -18,6 +18,10 @@ body {
   }
 }
 
+.container {
+  height: 100%;
+}
+
 a {
   cursor: pointer;
   text-decoration: none !important;
@@ -250,13 +254,18 @@ a {
 }
 
 .background {
-  background-color: #EAF1F5;
+  background-color: #A3D8F7;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100%;
   justify-content: center;
   width: 100%;
+}
+
+.background-home {
+  height: 35vh;
+  background-color: #006d93;
 }
 
 .card-1 {
@@ -323,7 +332,7 @@ a {
   border-radius: 2rem;
   position: relative;
   padding: 2rem 0;
-  min-height: 31.25rem;
+  min-height: 28.25rem;
   width: 60.5rem;
 }
 .form-container .logo-sipam {
@@ -409,28 +418,44 @@ a {
   color: #000;
 }
 
+.card-active {
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+  backdrop-filter: blur(2rem);
+  border-radius: 1rem;
+  overflow: hidden;
+  width: 30.125rem;
+  height: 21.875rem;
+  margin: 1rem;
+}
+
+.card-header-active {
+  background-color: #FFF;
+  overflow: hidden;
+  position: relative;
+  border-radius: 1rem;
+  height: 100%;
+  width: 30%;
+}
+.card-header-active i {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 10rem;
+  position: absolute;
+  bottom: -10%;
+  left: -40%;
+}
+
 .intro {
-  background-color: green;
+  background-color: #006d93;
   align-items: center;
   display: flex;
-  height: 40%;
+  height: 35vh;
   justify-content: center;
   position: relative;
   width: 100%;
-}
-
-.intro::after {
-  bottom: 0;
-  content: "";
-  background-color: black;
-  height: 5px;
-  position: absolute;
-  width: 100%;
+  margin-bottom: 4rem;
 }
 
 .logo-censipam {
-  border: solid 5px black;
-  border-radius: 80%;
   bottom: 0;
   position: absolute;
   transform: translateY(50%);
@@ -440,7 +465,6 @@ a {
 
 .intro h1 {
   color: white;
-  font-family: "Oswald";
   font-size: 65px;
 }
 
