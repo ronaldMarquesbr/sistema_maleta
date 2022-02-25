@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.css">
     <script src="../lib/bootstrap/js/bootstrap.js" defer></script>
     <script src="../lib/jquery/jquery.js" defer></script>
-    <script src="../lib/mask/script_mask.js" defer></script>
     <link rel="stylesheet" href="../style/main.css">
 
     
@@ -19,16 +18,16 @@
     <div class="background">
     <div class="form-container">
 
-        <!-- <img src=".././imgs/logo-maior.png" class="logo-sipam" alt="logo-sipam"> -->
+        <img src=".././imgs/logo-maior.png" class="logo-sipam" alt="logo-sipam">
         <h1>Solicitação de Empréstimo</h1>
 
-        <form method="POST" class="form">
+        <form method="POST" class="form d-flex flex-column align-items-center">
 
             <div class="d-flex flex-column">
 
                 <div class="box-input">
 
-                    <label class="nome-campo">Instituição</label>
+                    <label><i class='bx bx-buildings'></i>Instituição</label>
                     <select class="campo" name="instituicao">
 
                         <option seleted disable value="">
@@ -38,11 +37,11 @@
 
                 </div>
 
-                <div class="side">
+                <div class="row">
 
-                    <div class="box-input">
+                    <div class="box-input col">
 
-                        <label class="nome-campo">Maleta</label>
+                        <label class="nome-campo"><i class='bx bx-briefcase-alt'></i>Maleta</label>
                         <select name="num_maleta" class="campo">
 
                             <option seleted disable value=""></option>
@@ -56,27 +55,27 @@
                     </div>
 
 
-                    <div class="box-input">
+                    <div class="box-input col">
 
-                        <label for="nome-inst" class="nome-campo">Nº Processo</label>
+                        <label for="nome-inst" class="nome-campo"><i class='bx bx-file'></i>Nº Processo</label>
                         <input class="campo" type="text" name="num_processo" placeholder="Ex: 12345.123456/2021-12" id="num_processo" required onkeypress="$(this).mask('00000.000000/0000-00')">
 
                     </div>
 
                 </div>
 
-                <div class="side">
-                    <div class="box-input">
+                <div class="row">
+                    <div class="box-input col">
 
-                        <label class="nome-campo">Data de início</label>
-                        <input class="campo" oninput="dataMin(this.value)" type="date" name="dataIni" min="" required>
+                        <label class="nome-campo"><i class='bx bx-calendar-plus' ></i>Início</label>
+                        <input type="date" class="campo date" oninput="dataMin(this.value)" type="" name="dataIni" min="" required>
 
                     </div>
 
-                    <div class="box-input">
+                    <div class="box-input col">
 
-                        <label class="nome-campo">Data de Fim</label>
-                        <input class="campo" type="date" name="dataFim" min="" required>
+                        <label><i class='bx bx-calendar-exclamation' ></i>Fim</label>
+                        <input type="date" class="campo date" name="dataFim" min="" required >
 
                     </div>
 
@@ -86,12 +85,12 @@
 
             <div class="box-input">
 
-                <label class="nome-campo">Descrição</label>
+                <label class="nome-campo"><i class='bx bx-align-left'></i>Descrição</label>
                 <textarea class="input_descricao campo" name="descricao" placeholder="Ex: 'O aparelho vai ser operado em Imperatriz-MA'"></textarea>
 
             </div>
             
-            <button type="submit" class="botao_submit" name="enviar">CONFIRMAR</button>
+            <button type="submit" name="enviar">CONFIRMAR</button>
 
         </form>
 

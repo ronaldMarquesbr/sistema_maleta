@@ -14,7 +14,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   body {
-    padding: 4rem 0 0 68px;
+    padding: 4rem 0 0 70px;
   }
 }
 
@@ -32,12 +32,14 @@ a {
 
 .box-input {
   display: flex;
+  align-items: flex-start;
   flex-direction: column;
-  margin: 0.8rem;
 }
-
-.side {
-  display: flex;
+.box-input label {
+  margin-bottom: 0.7rem;
+}
+.box-input input, .box-input select, .box-input textarea {
+  margin-bottom: 1.2rem;
 }
 
 .header {
@@ -57,12 +59,12 @@ a {
 @media screen and (min-width: 768px) {
   .header {
     height: 4rem;
-    padding: 0 2rem 0 calc(68px + 2rem);
+    padding: 0 2rem 0 calc(70px + 2rem);
   }
 }
 
 .header_toggle {
-  color: #64c25d;
+  color: #93c572;
   font-size: 1.5rem;
   cursor: pointer;
 }
@@ -99,9 +101,9 @@ a {
   position: fixed;
   top: 0;
   left: -30%;
-  width: 68px;
+  width: 70px;
   height: 100vh;
-  background-color: #64c25d;
+  background-color: #93c572;
   padding: 0.5rem 1rem 0 0;
   transition: 0.5s;
   z-index: 100;
@@ -178,7 +180,7 @@ a {
 }
 @media screen and (min-width: 768px) {
   .show {
-    width: 224px;
+    width: 226px;
   }
 }
 
@@ -200,16 +202,18 @@ a {
 }
 
 .pd-icon {
-  padding-left: 68px;
+  padding-left: 70px;
 }
 @media screen and (min-width: 768px) {
   .pd-icon {
-    padding-left: 168px;
+    padding-left: 170px;
   }
 }
 
 .background {
-  background-image: linear-gradient(to right bottom, #288f21, #64C25D, #44b0e6, #4537A3);
+  background-image: linear-gradient(112.5deg, #d6d6d6 0%, #d6d6d6 10%, #c3c3c3 10%, #c3c3c3 53%, #b0b0b0 53%, #b0b0b0 55%, #9d9d9d 55%, #9d9d9d 60%, #898989 60%, #898989 88%, #767676 88%, #767676 91%, #636363 91%, #636363 100%), linear-gradient(157.5deg, #d6d6d6 0%, #d6d6d6 10%, #c3c3c3 10%, #c3c3c3 53%, #b0b0b0 53%, #b0b0b0 55%, #9d9d9d 55%, #9d9d9d 60%, #898989 60%, #898989 88%, #767676 88%, #767676 91%, #636363 91%, #636363 100%), linear-gradient(135deg, #d6d6d6 0%, #d6d6d6 10%, #c3c3c3 10%, #c3c3c3 53%, #b0b0b0 53%, #b0b0b0 55%, #9d9d9d 55%, #9d9d9d 60%, #898989 60%, #898989 88%, #767676 88%, #767676 91%, #636363 91%, #636363 100%), linear-gradient(90deg, #c3c3c3, #e4e4e4);
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -217,7 +221,6 @@ a {
   justify-content: center;
   width: 100%;
 }
-
 .card-1 {
   align-items: center;
   background-color: #e9edf1;
@@ -274,10 +277,12 @@ a {
 }
 
 .form-container {
+  box-shadow: 0 0.313rem 0.5rem #0000003b;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #FFF;
+  border-radius: 0.5rem;
   position: relative;
   padding: 2rem 0;
   min-height: 31.25rem;
@@ -285,34 +290,74 @@ a {
 }
 .form-container .logo-sipam {
   position: absolute;
+  height: 5rem;
+  top: 2%;
+  right: 2%;
 }
 .form-container h1 {
   margin: 1rem 0;
+  font-weight: bold;
 }
 .form-container label {
   color: #494949;
   font-size: 1.3rem;
 }
+.form-container label i {
+  color: #000;
+  background-color: #93c572;
+  border-radius: 100%;
+  margin-right: 0.5rem;
+  padding: 0.4rem;
+}
+.form-container label i.warning {
+  background-color: #f4c150 !important;
+}
 .form-container select {
   height: 2.5rem;
 }
 .form-container .campo {
+  outline: solid 0rem rgba(0, 0, 0, 0.2);
   border: solid 0.15rem rgba(0, 0, 0, 0.7);
   border-radius: 0.313rem;
+  transition: all 0.15s ease-out;
   width: 48.4rem;
   font-size: 1.2rem;
+  height: 2.6rem;
+}
+.form-container .campo:focus {
+  border: solid 0.15rem #00698e;
+  outline: solid 0.25rem rgba(0, 109, 147, 0.5);
 }
 .form-container .campo[name=num_maleta] {
-  width: 5rem;
+  width: 8rem;
 }
-.form-container .campo[name=num_processo] {
+.form-container .campo[name=num_processo], .form-container .campo[name=num_prorrogacao] {
   width: 16rem;
 }
-.form-container .campo[type=date] {
+.form-container .campo.date {
   width: 12rem;
+  text-align: center;
 }
 .form-container textarea {
-  height: 12rem;
+  height: 12rem !important;
+  resize: none;
+}
+.form-container button[type=submit] {
+  background-color: #006d93;
+  color: #FFF;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.15rem;
+  box-shadow: 0 0.313rem 0.5rem #0000003b;
+  cursor: pointer;
+  transition: all 0.5s;
+  height: 3.5rem;
+  width: 12.5rem;
+  margin: 0.5rem 0;
+}
+.form-container button[type=submit]:hover {
+  background-color: #f4c150;
+  color: #000;
 }
 
 .intro {

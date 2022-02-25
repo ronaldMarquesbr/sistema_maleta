@@ -2,10 +2,12 @@ $width-form: 60.5rem
 $height-form: 31.25rem
 
 .form-container
+    box-shadow: $shadow1
     display: flex
     flex-direction: column
     align-items: center
-    background-color: #FFF 
+    background-color: $white-color
+    border-radius: .5rem
     position: relative
     padding: 2rem 0
     min-height: $height-form 
@@ -13,30 +15,54 @@ $height-form: 31.25rem
 
     .logo-sipam
         position: absolute
-    
+        height: 5rem
+        top: 2%
+        right: 2%
+
     h1
         margin: 1rem 0
+        font-weight: bold
 
     label
         color: #494949
         font-size: 1.3rem
 
+        i
+            color: $dark
+            background-color: $first-color
+            border-radius: 100%
+            margin-right: .5rem 
+            padding: .4rem
+
+            &.warning
+                background-color: $warning-color !important 
+
     select
-         height: 2.5rem 
+        height: 2.5rem 
 
     .campo
         @include input-1(rgba(0,0,0,.7))
         width: $width-form * 0.8
         font-size: 1.2rem
+        height: 2.6rem
 
         &[name="num_maleta"]
-            width: 5rem
+            width: 8rem
 
-        &[name="num_processo"]
+        &[name="num_processo"], &[name="num_prorrogacao"]
             width: 16rem
 
-        &[type="date"]
+        &.date
             width: 12rem
+            text-align: center
 
     textarea
-        height: 12rem
+        height: 12rem !important
+        resize: none
+
+    button[type="submit"]
+        @include button-1($second-color, $white-color)
+        height: 3.5rem
+        width: 12.5rem
+        margin: .5rem 0
+       

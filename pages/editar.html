@@ -2,102 +2,105 @@
 <html>
 
 <head>
+
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../css/style_main.css">
+
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.css">
+    <script src="../lib/bootstrap/js/bootstrap.js" defer></script>
     <script src="../lib/jquery/jquery.js" defer></script>
     <script src="../lib/mask/script_mask.js" defer></script>
-    <link rel="stylesheet" href="../css/style_pages/style_editar/style_editar.css">
+    <link rel="stylesheet" href="../style/main.css">
+
     
 </head>
 
 <body>
 
     <div class="background">
-    <div class="container">
+    <div class="form-container">
 
+        <img src=".././imgs/logo-maior.png" class="logo-sipam" alt="logo-sipam">
+        <h1>Editar empréstimo</h1>
 
-        <h1 class="titulo_formulario">Atualização de Empréstimo</h1>
-        <img src="../imgs/logo-maior.png"  alt="logo-sipam" id="logo-sipam">
-    
-        <form class="form" method="post">
+        <form method="POST" class="form d-flex flex-column align-items-center">
 
-             <div class="flex-box">
+            <div class="d-flex flex-column">
 
                 <div class="box-input">
 
-                    <label class="nome-campo">Instituição</label>
-                    <input class="campo" type="text" name="instituicao" id="instituicao" disabled>
+                    <label><i class='bx bx-buildings'></i>Instituição</label>
+                    <select disabled class="campo" name="instituicao">
+
+                        <option value="">Instituto Federal do Pará</option>    
+
+                    </select>
 
                 </div>
 
-                <div class="grid-box">
+                <div class="row">
 
-                    <div class="box-input">
+                    <div class="box-input col">
 
-                        <label class="nome-campo">Nº Maleta</label>
-                        <input type="text" class="campo" id="maleta" name="maleta" disabled value="013">
+                        <label class="nome-campo"><i class='bx bx-briefcase-alt'></i>Maleta</label>
+                        <select disabled name="num_maleta" class="campo">
+                        </select>
 
                     </div>
 
 
-                    <div class="box-input">
+                    <div class="box-input col">
 
-                        <label for="nome-inst" class="nome-campo">N° Processo</label>
+                        <label for="nome-inst" class="nome-campo"><i class='bx bx-file'></i>Nº Processo</label>
                         <input class="campo" type="text" name="num_processo" id="num_processo" disabled>
 
                     </div>
 
-                </div>
+                    
+                    <div class="box-input col">
 
-
-                <div class="grid-box">
-
-                    <div class="box-input">
-
-                        <label class="nome-campo">Data de início</label>
-                        <input class="data campo" type="date" name="dataIni" oninput="dataMin(this.value)" id="dataIni" required>
-                    </div>
-
-                    <div class="box-input">
-
-                        <label class="nome-campo">Data de Fim <span style="color: red;">*</span></label>
-                        <input class="data campo" type="date" name="dataFim" min="" required>
+                        <label><i class='bx bx-file warning'></i>Ofício de prorrogação</label>
+                        <input type="text" class="campo" name="num_prorrogacao" required >
 
                     </div>
 
                 </div>
 
-                <div class="box-input">
+                <div class="row">
+                    <div class="box-input col">
 
-                    <label for="nome-inst" class="nome-campo">Ofício de Prorrogação <span style="color: red;">*</span></label>
-                    <input class="campo" type="text" name="num_prorrogacao" id="num_prorrogacao" value="">
+                        <label class="nome-campo"><i class='bx bx-calendar-plus warning' ></i>Início</label>
+                        <input type="date" class="campo date" oninput="dataMin(this.value)" type="" name="dataIni" min="" required>
+
+                    </div>
+
+                    <div class="box-input col">
+
+                        <label><i class='bx bx-calendar-exclamation warning' ></i>Fim</label>
+                        <input type="date" class="campo date" name="dataFim" min="" required >
+
+                    </div>
 
                 </div>
 
             </div>
-
-
 
             <div class="box-input">
-                <label class="nome-campo">Descrição:</label>
-                <textarea class="input_descricao campo" name="descricao" id="descricao"></textarea>
+
+                <label class="nome-campo"><i class='bx bx-align-left'></i>Descrição</label>
+                <textarea class="input_descricao campo" name="descricao" placeholder="Ex: 'O aparelho vai ser operado em Imperatriz-MA'"></textarea>
+
             </div>
-        <?php } ?>
-        <button type="submit" class="botao_submit" name="atualizar">Atualizar</button>
+            
+            <button type="submit" name="enviar">CONFIRMAR</button>
 
-    </form>
+        </form>
 
 
     </div>
-    </div>
-
-    <!-- SCRIPTS -->
     <script src="../JS/script_formulario.js"></script>
-    <script>
 
-        dataMin(document.getElementsByName('dataIni')[0].value)
-
-    </script> 
+</div>
 </body>
+    
 
 </html>
