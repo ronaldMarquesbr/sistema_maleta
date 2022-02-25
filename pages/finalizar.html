@@ -2,115 +2,98 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="../css/style_pages/style_finalizar/style_finalizar.css">
-    <script src="../JS/script_formulario.js" defer></script>
-    <script src="../lib/jquery/jquery.js" defer></script>
-    <script src="../lib/mask/script_mask.js" defer></script>
 
+    <meta charset="UTF-8">
+    
 </head>
 
 <body>
 
     <div class="background">
-        <div class="container">
+    <div class="form-container">
 
-            <img src="../imgs/logo-maior.png" id="logo-sipam" alt="logo-sipam">
-            <h1 class="titulo_formulario">Finalização de Empréstimo</h1>
+        <img src=".././imgs/logo-maior.png" class="logo-sipam" alt="logo-sipam">
+        <h1>Finalizar empréstimo</h1>
 
-            <form class="form" method="post">
+        <form method="POST" class="form d-flex flex-column align-items-center">
 
-                    <div class="flex-box">
+            <div class="d-flex flex-column">
 
-                        <div class="box-input">
+                <div class="box-input">
 
-                            <label class="nome-campo">Instituição</label>
-                            <input type="text" class="campo" name="instituicao" id="instituicao" disabled>
+                    <label><i class='bx bx-buildings'></i>Instituição</label>
+                    <select disabled class="campo" name="instituicao">
 
-                        </div>
+                        <option value="">Instituto Federal do Pará</option>    
 
-                        <div class="grid-box">
+                    </select>
 
-                            <div class="box-input">
+                </div>
 
-                                <label class="nome-campo">Nº Maleta</label>
-                                <input type="text" class="campo" id="maleta" name="maleta" disabled placeholder="" value="">
+                <div class="row">
 
-                            </div>
+                    <div class="box-input col">
 
-
-                            <div class="box-input">
-
-                                <label for="nome-inst" class="nome-campo">N° Processo</label>
-                                <input type="text" class="campo" name="num_processo" id="num_processo" disabled value="">
-
-                            </div>
-
-                        </div>
-                       
-
-                        <div class="grid-box">
-
-                            <div class="box-input">
-
-                                <label class="nome-campo">Data de início</label>
-                                <input type="date" class="campo" name="dataIni" id="dataIni" disabled>
-                            </div>
-
-                            <div class="box-input">
-
-                            <label class="nome-campo">Data de Fim</label>
-                                <input type="date" class="campo" name="dataFim" id="dataFim" disabled>
-
-                            </div>
-
-                        </div>
-
-                        <div class="box-input">
-
-                            <label for="nome-inst" class="nome-campo">Ofício de Prorrogação</label>
-                            <input type="text" class="campo" name="num_prorrogacao" id="num_prorrogacao" disabled>
-
-                        </div>
+                        <label class="nome-campo"><i class='bx bx-briefcase-alt'></i>Maleta</label>
+                        <select disabled name="num_maleta" class="campo">
+                            <option value="10">10</option>
+                        </select>
 
                     </div>
 
 
+                    <div class="box-input col">
 
-                    <div class="box-input">
-                        <label class="nome-campo">Descrição:</label>
-                        <textarea class="campo input_descricao" name="descricao" id="descricao" disabled></textarea>
+                        <label for="nome-inst" class="nome-campo"><i class='bx bx-file'></i>Nº Processo</label>
+                        <input class="campo" type="text" name="num_processo" id="num_processo" value="12345678945" disabled>
+
                     </div>
-                <?php } ?>
-                <button type="submit" class="botao_finalizar" id="botao-finalizar" data-bs-toggle="modal" data-bs-target="#modalConfirmacao" name="finalizar">Finalizar</button>
 
-                <div class="modal fade" id="modalConfirmacao">
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                          </button>
-                        </div>
-                        <div class="modal-body">
-                          ...
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                          <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
-                      </div>
+                    
+                    <div class="box-input col">
+
+                        <label><i class='bx bx-file'></i>Ofício de prorrogação</label>
+                        <input type="text" class="campo" name="num_prorrogacao" value="123456789" disabled >
+
                     </div>
-                  </div>
 
-            </form>
+                </div>
 
+                <div class="row">
+                    <div class="box-input col">
 
-        </div>
+                        <label class="nome-campo"><i class='bx bx-calendar-plus'></i>Início</label>
+                        <input type="date" class="campo date" name="dataIni" disabled>
+
+                    </div>
+
+                    <div class="box-input col">
+
+                        <label><i class='bx bx-calendar-exclamation'></i>Fim</label>
+                        <input type="date" class="campo date" name="dataFim" disabled >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="box-input">
+
+                <label class="nome-campo"><i class='bx bx-align-left'></i>Descrição</label>
+                <textarea class="input_descricao campo" name="descricao" placeholder="Ex: 'O aparelho vai ser operado em Imperatriz-MA'"></textarea>
+
+            </div>
+            
+            <button type="submit" name="enviar">CONFIRMAR</button>
+
+        </form>
+
 
     </div>
 
+</div>
 </body>
+    
 
 </html>

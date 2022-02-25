@@ -6,17 +6,23 @@ document.addEventListener("DOMContentLoaded", function (event) {
       bodypd = document.getElementById(bodyId),
       headerpd = document.getElementById(headerId);
 
+
     /// Validate that all variables exist
     if (toggle && nav && bodypd && headerpd) {
-      toggle.addEventListener("click", () => {
+      toggle.addEventListener("click", (e) => {
+        
         // show navbar
         nav.classList.toggle("show"),
-          // change icon
-          toggle.classList.toggle("pd-icon");
+        // change icon
+        toggle.classList.toggle("pd-icon");
+        toggle.querySelector("div").classList.toggle("transform")
         // add padding to body
         bodypd.classList.toggle("body-pd");
         // add padding to header
         headerpd.classList.toggle("body-pd");
+
+        // }
+     
       });
     }
   };
@@ -33,31 +39,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   linkColor.forEach((l) => l.addEventListener("click", colorLink));
+
+  // document.getElementById("header-toggle").addEventListener("click", event => {
+
+  //   console.log("a")
+
+  // })
+
 });
-/*
-$(document).ready(function () {
-  $("#cadastro").click(function () {
-    $(function () {
-      $("#cont").load("cadastro.php");
-    });
-  });
-
-  $("#emprest").click(function () {
-    $(function () {
-      $("#cont").load("emprest.php");
-    });
-  });
-
-  $("#ativos").click(function () {
-    $(function () {
-      $("#cont").load("ativos.php");
-    });
-  });
-
-  $("#editar").click(function () {
-    $(function () {
-      $("#cont").load("editar.php");
-    });
-  });
-});
-*/

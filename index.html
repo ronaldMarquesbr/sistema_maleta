@@ -8,19 +8,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Painel Empréstimo de Maletas</title>
 
-    <script src="lib/jquery/jquery.js"></script>
+    <!-- jquery -->
+    <script src="./lib/jquery/jquery.js"></script>
 
-    <script src="lib/bootstrap/js/bootstrap.js"></script>
-    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <!-- bootstrap -->
+    <script src="./lib/bootstrap/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
 
+    <!-- icons -->
     <link rel="stylesheet" href="./lib/boxicons/css/boxicons.css">
 
-    <script src="JS/script_main.js" defer></script>
+    <!-- scripts nativos -->
+    <script src="./JS/script_formulario.js" defer></script>
+    <script src="./JS/script_main.js" defer></script>
     <link rel="stylesheet" href="./style/main.css">
 
-    <script src="lib/mask/script_mask.js" defer></script>
 
-    <link rel="stylesheet" href="lib/icons/css/icons.css">
+    <!-- mask -->
+    <script src="./lib/mask/script_mask.js" defer></script>
 
 </head>
 
@@ -28,7 +33,9 @@
 <body id="body-pd">
 
     <header class="header" id="header">
-        <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
+        <div class="header_toggle" id="header-toggle">
+            <div></div>
+        </div>
     </header>
 
     <div class="l-navbar" id="nav-bar">
@@ -77,12 +84,12 @@
     <script>
         $(document).ready(function(){
     
-            $("#cont").load("/pages/home.html");
+            $("#cont").load("./pages/home.html");
 
             $("#link-cadastro").click(function(){
                   
                  $(function(){
-                     $("#cont").load("/pages/cadastro.html"); 
+                     $("#cont").load("./pages/cadastro.html"); 
                  });
 
              });
@@ -90,7 +97,7 @@
             $("#link-emprestimo").click(function(){
                   
                 $(function(){
-                    $("#cont").load("/pages/emprestimo.html"); 
+                    $("#cont").load("./pages/emprestimo.html"); 
                 });
 
             });
@@ -98,7 +105,7 @@
             $("#link-ativos").click(function(){
                   
                 $(function(){
-                    $("#cont").load("/pages/ativos.html"); 
+                    $("#cont").load("./pages/ativos.html"); 
                 });
 
             });
@@ -106,7 +113,7 @@
             $(".nav_logo").click(function(){
                   
                   $(function(){
-                      $("#cont").load("/pages/main.html"); 
+                      $("#cont").load("./pages/main.html"); 
                   });
   
               });

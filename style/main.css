@@ -65,12 +65,52 @@ a {
 
 .header_toggle {
   color: #93c572;
-  font-size: 1.5rem;
   cursor: pointer;
 }
 
 #header-toggle {
+  height: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   transition: all 0.5s ease-out;
+}
+#header-toggle > * {
+  pointer-events: none;
+}
+#header-toggle .transform {
+  transform: rotate(45deg);
+}
+#header-toggle .transform::before {
+  transform: translateY(0);
+  height: 0;
+}
+#header-toggle .transform::after {
+  transform: translateY(0) rotate(90deg);
+  height: 105%;
+}
+#header-toggle div {
+  position: relative;
+  background-color: #93c572;
+  height: 0.25rem !important;
+  width: 1.5rem !important;
+  border-radius: 1rem;
+  transition: all 0.25s 0.25s;
+}
+#header-toggle div::before, #header-toggle div::after {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #93c572;
+  border-radius: 1rem;
+  transition: all 0.5s;
+}
+#header-toggle div::before {
+  transform: translateY(-170%);
+}
+#header-toggle div::after {
+  transform: translateY(170%);
 }
 
 .header_img {
@@ -134,7 +174,6 @@ a {
 
 .nav_logo {
   color: black;
-  font-family: "Oswald";
   font-size: 19px;
   font-weight: bold;
   margin-bottom: 2rem;
@@ -180,7 +219,7 @@ a {
 }
 @media screen and (min-width: 768px) {
   .show {
-    width: 226px;
+    width: 250px;
   }
 }
 
@@ -211,9 +250,7 @@ a {
 }
 
 .background {
-  background-image: linear-gradient(112.5deg, #d6d6d6 0%, #d6d6d6 10%, #c3c3c3 10%, #c3c3c3 53%, #b0b0b0 53%, #b0b0b0 55%, #9d9d9d 55%, #9d9d9d 60%, #898989 60%, #898989 88%, #767676 88%, #767676 91%, #636363 91%, #636363 100%), linear-gradient(157.5deg, #d6d6d6 0%, #d6d6d6 10%, #c3c3c3 10%, #c3c3c3 53%, #b0b0b0 53%, #b0b0b0 55%, #9d9d9d 55%, #9d9d9d 60%, #898989 60%, #898989 88%, #767676 88%, #767676 91%, #636363 91%, #636363 100%), linear-gradient(135deg, #d6d6d6 0%, #d6d6d6 10%, #c3c3c3 10%, #c3c3c3 53%, #b0b0b0 53%, #b0b0b0 55%, #9d9d9d 55%, #9d9d9d 60%, #898989 60%, #898989 88%, #767676 88%, #767676 91%, #636363 91%, #636363 100%), linear-gradient(90deg, #c3c3c3, #e4e4e4);
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-color: #EAF1F5;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -221,6 +258,7 @@ a {
   justify-content: center;
   width: 100%;
 }
+
 .card-1 {
   align-items: center;
   background-color: #e9edf1;
@@ -277,12 +315,12 @@ a {
 }
 
 .form-container {
-  box-shadow: 0 0.313rem 0.5rem #0000003b;
+  box-shadow: 0 0 1rem 0.2rem #0000002a;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #FFF;
-  border-radius: 0.5rem;
+  background-color: #ffffff;
+  border-radius: 2rem;
   position: relative;
   padding: 2rem 0;
   min-height: 31.25rem;
@@ -312,12 +350,17 @@ a {
 .form-container label i.warning {
   background-color: #f4c150 !important;
 }
+.form-container select, .form-container input[type=text] {
+  text-indent: 0.5rem;
+}
 .form-container select {
   height: 2.5rem;
 }
 .form-container .campo {
   outline: solid 0rem rgba(0, 0, 0, 0.2);
-  border: solid 0.15rem rgba(0, 0, 0, 0.7);
+  border: solid 0.1rem #a5c3d4;
+  background-color: #EAF1F5;
+  padding: 0.05rem;
   border-radius: 0.313rem;
   transition: all 0.15s ease-out;
   width: 48.4rem;
@@ -325,8 +368,8 @@ a {
   height: 2.6rem;
 }
 .form-container .campo:focus {
-  border: solid 0.15rem #00698e;
-  outline: solid 0.25rem rgba(0, 109, 147, 0.5);
+  border: solid 0.1rem #00698e;
+  outline: solid 0.2rem rgba(0, 109, 147, 0.5);
 }
 .form-container .campo[name=num_maleta] {
   width: 8rem;
@@ -338,6 +381,12 @@ a {
   width: 12rem;
   text-align: center;
 }
+.form-container .sigla {
+  width: 10rem;
+  text-transform: uppercase;
+  text-align: center;
+  text-indent: 0 !important;
+}
 .form-container textarea {
   height: 12rem !important;
   resize: none;
@@ -347,7 +396,7 @@ a {
   color: #FFF;
   font-weight: bold;
   border: none;
-  border-radius: 0.15rem;
+  border-radius: 1.5rem;
   box-shadow: 0 0.313rem 0.5rem #0000003b;
   cursor: pointer;
   transition: all 0.5s;

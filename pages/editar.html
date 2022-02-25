@@ -2,16 +2,7 @@
 <html>
 
 <head>
-
     <meta charset="UTF-8">
-
-    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.css">
-    <script src="../lib/bootstrap/js/bootstrap.js" defer></script>
-    <script src="../lib/jquery/jquery.js" defer></script>
-    <script src="../lib/mask/script_mask.js" defer></script>
-    <link rel="stylesheet" href="../style/main.css">
-
-    
 </head>
 
 <body>
@@ -43,6 +34,7 @@
 
                         <label class="nome-campo"><i class='bx bx-briefcase-alt'></i>Maleta</label>
                         <select disabled name="num_maleta" class="campo">
+                            <option value="10">10</option>
                         </select>
 
                     </div>
@@ -51,7 +43,7 @@
                     <div class="box-input col">
 
                         <label for="nome-inst" class="nome-campo"><i class='bx bx-file'></i>Nº Processo</label>
-                        <input class="campo" type="text" name="num_processo" id="num_processo" disabled>
+                        <input class="campo" type="text" name="num_processo" id="num_processo" value="12345678945" disabled>
 
                     </div>
 
@@ -59,7 +51,7 @@
                     <div class="box-input col">
 
                         <label><i class='bx bx-file warning'></i>Ofício de prorrogação</label>
-                        <input type="text" class="campo" name="num_prorrogacao" required >
+                        <input type="text" class="campo" name="num_prorrogacao" required>
 
                     </div>
 
@@ -69,7 +61,7 @@
                     <div class="box-input col">
 
                         <label class="nome-campo"><i class='bx bx-calendar-plus warning' ></i>Início</label>
-                        <input type="date" class="campo date" oninput="dataMin(this.value)" type="" name="dataIni" min="" required>
+                        <input type="date" class="campo date" oninput="dataMin(this.value)" name="dataIni" min="" required>
 
                     </div>
 
@@ -97,7 +89,6 @@
 
 
     </div>
-    <script src="../JS/script_formulario.js"></script>
 
 </div>
 </body>

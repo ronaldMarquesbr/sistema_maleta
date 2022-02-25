@@ -2,69 +2,45 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style_pages/style_cadastro/style_cadastro.css">
-    <script src="../JS/script_formulario.js" defer></script>
-    <script src="../lib/jquery/jquery.js" defer></script>
-    <script src="../lib/mask/script_mask.js" defer></script>
-    
-</head>
 
+    <meta charset="UTF-8">
+  
+</head>
 
 <body>
 
     <div class="background">
-        <div class=" container">
+    <div class="form-container">
 
-            <h1 class="titulo_formulario">Cadastro de Instituição</h1>
+        <img src=".././imgs/logo-maior.png" class="logo-sipam" alt="logo-sipam">
+        <h1>Cadastro de instituição</h1>
 
-            <form method="POST" class="form">
+        <form method="POST" class="form d-flex flex-column align-items-center">
+
 
                 <div class="box-input">
 
-                    <label for="nome-inst" class="nome-campo">Nome da instituição</label>
-                    <input type="text" id="nome-inst" name="nome_inst" required class="campo">
+                    <label><i class='bx bx-buildings'></i>Nome da instituição</label>
+                    <input type="text" class="campo" required>
 
                 </div>
 
                 <div class="box-input">
 
-                    <label for="sigla-inst" class="nome-campo">Sigla</label>
-                    <input type="text" id="sigla-inst" name="sigla_inst" required="required" pattern="[A-Za-z]+$" title="Insira apenas letras" class="campo">
-            
+                    <label><i class='bx bx-font-family'></i>Sigla da instituição</label>
+                    <input type="text" class="campo sigla" pattern="[A-Za-z]+$" title="Insira apenas letras" required>
 
                 </div>
 
-                <button type="submit" class="botao_submit" data-bs-toggle="modal" data-bs-target="#modal-confirmacao">CONFIRMAR</button>
+            <button type="submit" name="enviar">CONFIRMAR</button>
+
+        </form>
 
 
-                <div class="modal fade" id="modal-confirmacao">
-                    <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                       
-                        </div>
-                        <div class="modal-body">
-                            <div><img src="../imgs/check.png" class="check-img"></div>
-                            <h2>Cadastro realizado com sucesso!</h2>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="button-return" data-bs-dismiss="modal">Voltar <span class="set-icon">&lt</span></button>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-            
-            </form>
-
-        </div>
     </div>
 
-
-
+</div>
 </body>
-
+    
 
 </html>

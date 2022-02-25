@@ -18,12 +18,53 @@
 
 .header_toggle 
     color: $first-color
-    font-size: 1.5rem
     cursor: pointer
 
 
 #header-toggle
+    height: 1.8rem
+    display: flex
+    flex-direction: column
+    justify-content: center
     transition: all 0.5s ease-out
+
+    > * 
+        pointer-events: none
+
+    .transform
+        transform: rotate(45deg)
+
+        &::before
+            transform: translateY(0)
+            height: 0
+
+        &::after
+            transform: translateY(0) rotate(90deg) 
+            height: 105%
+                
+    div
+        position: relative
+        background-color: $first-color
+        height: 0.25rem !important
+        width: 1.5rem !important
+        border-radius: 1rem
+        transition: all .25s .25s
+
+        &::before, &::after
+            content: " "
+            position: absolute
+            width: 100%
+            height: 100%
+            background-color: $first-color
+            border-radius: 1rem
+            transition: all .5s
+        
+        &::before
+            transform: translateY(-170%)
+
+        &::after
+            transform: translateY(170%)
+
 
 
 .header_img 
@@ -80,7 +121,6 @@
 
 .nav_logo 
     color: black
-    font-family: 'Oswald'
     font-size: 19px
     font-weight: bold
     margin-bottom: 2rem
@@ -125,7 +165,7 @@
     left: 0
 
     @media screen and (min-width: 768px)
-        width: $nav-width + 156px
+        width: $nav-width + 180px
 
 
 .active 
