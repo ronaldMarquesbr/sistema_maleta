@@ -2,6 +2,12 @@
   font-family: Public Sans;
   src: url("../../lib/fonts/public_sans/PublicSans-VariableFont_wght.ttf");
 }
+.page-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 1rem 0;
+}
+
 body {
   position: relative;
   padding: 3rem 0 0 0;
@@ -254,7 +260,7 @@ a {
 }
 
 .background {
-  background-color: #006d93;
+  background-color: rgba(0, 109, 147, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -266,6 +272,9 @@ a {
 .background-home {
   height: 35vh;
   background-color: #006d93;
+}
+.background-home .container {
+  background-color: transparent !important;
 }
 
 .card-1 {
@@ -419,29 +428,61 @@ a {
 }
 
 .card-active {
+  display: flex;
+  align-items: center;
   background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
   backdrop-filter: blur(2rem);
   border-radius: 1rem;
   overflow: hidden;
-  width: 30.125rem;
-  height: 21.875rem;
+  width: 65rem;
+  height: 8.875rem;
   margin: 1rem;
 }
 
 .card-header-active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
   background-color: #FFF;
   overflow: hidden;
   position: relative;
   border-radius: 1rem;
   height: 100%;
-  width: 30%;
+  width: 10%;
 }
-.card-header-active i {
-  color: rgba(0, 0, 0, 0.4);
-  font-size: 10rem;
-  position: absolute;
-  bottom: -10%;
-  left: -40%;
+
+.card-desc-active {
+  box-sizing: border-box;
+  border-radius: 1rem;
+  padding: 0.7rem;
+  width: 53.3rem;
+  background: #FFF;
+}
+.card-desc-active .card-active-field {
+  cursor: default;
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0;
+  overflow-x: auto !important;
+  height: 2.2rem;
+  border: solid 0.03rem rgba(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.card-desc-active .card-active-field div {
+  display: flex;
+  align-items: center;
+  padding: 0 0.4rem;
+  height: 100%;
+  background-color: #93c572;
+}
+.card-desc-active .card-active-field h4 {
+  font-size: 1.3rem;
+  margin: 0;
+}
+.card-desc-active .card-active-field > h4 {
+  margin: 0 0.5rem;
 }
 
 .intro {
