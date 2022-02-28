@@ -10,14 +10,44 @@ $height-form: 28.25rem
     border-radius: 1.5rem
     position: relative
     padding: 2rem 0
-    min-height: $height-form 
-    width: $width-form
+    min-height: $height-form
+    height: fit-content
+
+    @media screen and (min-width: $xl) 
+        width: $width-form
+   
+    @media screen and (max-width: $xl)
+        width: $width-form * .75
+
+    @media screen and (max-width: $lg)
+        width: 100%
+        min-height: calc(100vh - $header-height )
+        border-radius: 0%
+        padding: 0
+    
+    @media screen and (min-width: $lg)
+        margin: 2rem 0
+
+    @media screen and (max-width: $xs)
+        text-align: center
+
+    form
+        width: 80%
+
+        > div
+            width: 100%
+
+    > div
+        width: fit-content 
 
     .logo-sipam
         position: absolute
         height: 5rem
         top: 2%
         right: 2%
+
+        @media screen and (max-width: $md)
+            display: none
 
     h1
         margin: 1rem 0
@@ -26,6 +56,9 @@ $height-form: 28.25rem
     label
         color: #494949
         font-size: 1.3rem
+
+        @media screen and (max-width: 300px)
+            font-size: 1rem
 
         i
             color: $dark
@@ -45,9 +78,12 @@ $height-form: 28.25rem
 
     .campo
         @include input-1(rgba(0,0,0,.7))
-        width: $width-form * 0.8
+        width: 100%
         font-size: 1.2rem
         height: 2.6rem
+
+        @media screen and (max-width: $xs)
+            max-width: 100%
 
         &[name="num_maleta"]
             width: 8rem
