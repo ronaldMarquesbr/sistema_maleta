@@ -12,7 +12,7 @@
     z-index: $z-fixed
     transition: .5s
 
-    @media screen and (min-width: 768px)
+    @media screen and (min-width: $md)
         height: $header-height + 1rem
         padding: 0 2rem 0 calc($nav-width + 2rem)
 
@@ -75,7 +75,7 @@
     border-radius: 50%
     overflow: hidden
 
-    @media screen and (min-width: 768px)
+    @media screen and (min-width: $md)
         width: 2.5rem
         height: 2.5rem
 
@@ -83,7 +83,7 @@
 .header_img img 
     width: 40px
 
-    @media screen and (min-width: 768px)
+    @media screen and (min-width: $md)
         width: 45px
 
 .l-navbar 
@@ -97,7 +97,7 @@
     transition: .5s
     z-index: $z-fixed
 
-    @media screen and (min-width: 768px)
+    @media screen and (min-width: $md)
         left: 0
         padding: 1rem 1rem 0 0
 
@@ -164,7 +164,7 @@
 .show 
     left: 0
 
-    @media screen and (min-width: 768px)
+    @media screen and (min-width: $md)
         width: $nav-width + 12.25rem
 
 
@@ -188,5 +188,5 @@
 .pd-icon
     padding-left: $nav-width
 
-    @media screen and (min-width: 768px)
+    @media screen and (min-width: $md)
         padding-left: $nav-width + 6.25rem

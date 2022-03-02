@@ -5,7 +5,7 @@
 .page-title {
   font-size: 2.5rem;
   font-weight: 800;
-  margin: 1rem 0;
+  margin: 2rem 0 3rem 0;
 }
 
 body {
@@ -129,7 +129,7 @@ a {
 @media screen and (max-width: 62rem) {
   .form-container {
     width: 100%;
-    height: 100%;
+    min-height: calc(100vh - 3rem - 1rem);
     border-radius: 0%;
     padding: 0;
   }
@@ -137,6 +137,11 @@ a {
 @media screen and (min-width: 62rem) {
   .form-container {
     margin: 2rem 0;
+  }
+}
+@media screen and (max-width: 48rem) {
+  .form-container {
+    min-height: calc(100vh - 3rem);
   }
 }
 @media screen and (max-width: 36rem) {
@@ -167,6 +172,12 @@ a {
 .form-container h1 {
   margin: 1rem 0;
   font-weight: bold;
+}
+@media screen and (max-width: 36rem) {
+  .form-container h1 {
+    font-size: 1.6rem;
+    margin: 1rem 0 2rem 0;
+  }
 }
 .form-container label {
   color: #494949;
@@ -250,6 +261,11 @@ a {
   background-color: #f4c150;
   color: #000;
 }
+@media screen and (max-width: 48rem) {
+  .form-container button[type=submit] {
+    margin: 1rem 0 2rem 0;
+  }
+}
 
 .card-active {
   display: flex;
@@ -262,8 +278,17 @@ a {
   height: 8.875rem;
   margin: 1rem;
 }
+@media screen and (max-width: 75rem) {
+  .card-active {
+    width: fit-content;
+    height: fit-content;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
 
 .card-header-active {
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -276,6 +301,19 @@ a {
   height: 100%;
   width: 10%;
 }
+@media screen and (max-width: 75rem) {
+  .card-header-active {
+    flex-direction: row;
+    column-gap: 0.5rem;
+    margin: 1rem;
+    height: fit-content;
+    padding: 1rem 5rem;
+    font-size: 1rem;
+  }
+  .card-header-active p {
+    margin: 0;
+  }
+}
 .card-header-active p {
   font-size: 1rem;
   display: block;
@@ -287,6 +325,12 @@ a {
   padding: 0.7rem;
   width: 53.3rem;
   background: #FFF;
+}
+@media screen and (max-width: 75rem) {
+  .card-desc-active {
+    width: fit-content;
+    margin: 0 0 1rem 1rem;
+  }
 }
 .card-desc-active .card-active-field {
   cursor: default;
@@ -310,8 +354,51 @@ a {
   font-size: 1.3rem;
   margin: 0;
 }
+@media screen and (max-width: 75rem) {
+  .card-desc-active .card-active-field h4 {
+    font-size: 1rem;
+  }
+}
 .card-desc-active .card-active-field > h4 {
   margin: 0 0.5rem;
+}
+@media screen and (max-width: 75rem) {
+  .card-desc-active .date-field {
+    width: 63%;
+  }
+}
+@media screen and (max-width: 75rem) {
+  .card-desc-active .institution-field {
+    width: 35rem;
+  }
+}
+
+.row-fields {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 75rem) {
+  .row-fields {
+    display: grid;
+    grid-template: 1fr 1fr/1fr 1fr;
+  }
+}
+
+.container-chart {
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+  backdrop-filter: blur(2rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 25rem;
+  width: 21.875rem;
+  border-radius: 1rem;
+}
+
+#chart-maletas {
+  height: 18.75rem;
+  width: 18.75rem;
 }
 
 .header {
@@ -328,7 +415,7 @@ a {
   z-index: 100;
   transition: 0.5s;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .header {
     height: 4rem;
     padding: 0 2rem 0 6.5rem;
@@ -393,7 +480,7 @@ a {
   border-radius: 50%;
   overflow: hidden;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .header_img {
     width: 2.5rem;
     height: 2.5rem;
@@ -403,7 +490,7 @@ a {
 .header_img img {
   width: 40px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .header_img img {
     width: 45px;
   }
@@ -420,7 +507,7 @@ a {
   transition: 0.5s;
   z-index: 100;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .l-navbar {
     left: 0;
     padding: 1rem 1rem 0 0;
@@ -489,7 +576,7 @@ a {
 .show {
   left: 0;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .show {
     width: 16.75rem;
   }
@@ -515,7 +602,7 @@ a {
 .pd-icon {
   padding-left: 4.5rem;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .pd-icon {
     padding-left: 10.75rem;
   }
@@ -533,6 +620,11 @@ a {
   background-repeat: no-repeat;
   min-height: calc(100vh - 3rem);
   width: 100%;
+}
+@media screen and (min-width: 48rem) {
+  .background {
+    min-height: calc(100vh - 3rem - 1rem);
+  }
 }
 @media screen and (min-width: 36rem) {
   .background {

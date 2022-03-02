@@ -3,10 +3,12 @@
     background-color: transparentize($second-color, .7)
     background-size: cover
     background-repeat: no-repeat
-    min-height: calc(100vh - 3rem)
+    min-height: calc( 100vh - $header-height )
     width: 100%
-    // @media screen and (min-width: $md)
-    //     min-height: calc(100vh - 4rem)
+
+    @media screen and (min-width: $md)
+        min-height: calc( 100vh - $header-height - 1rem )
+
     @media screen and (min-width: $xs)
         display: flex
         justify-content: center
